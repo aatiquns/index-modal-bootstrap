@@ -1,0 +1,80 @@
+<!-- resources/views/education.blade.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Education</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">
+        Add New Education
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="educationModalLabel">Add New Education</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="educationForm">
+                        <div class="mb-3">
+                            <label for="last_degree" class="form-label">Last Degree</label>
+                            <select class="form-select" id="last_degree" name="last_degree" required>
+                                <option value="" selected disabled>Choose your last degree</option>
+                                <option value="High School">High School</option>
+                                <option value="Associate Degree">Associate Degree</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                                <option value="Doctorate">Doctorate</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="university" class="form-label">University Or School</label>
+                            <input type="text" class="form-control" id="university" name="university" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="field_of_study" class="form-label">Field Of Study</label>
+                            <input type="text" class="form-control" id="field_of_study" name="field_of_study" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="current_study">
+                            <label class="form-check-label" for="current_study">I am currently study here</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="start_date" class="form-label">Start Date</label>
+                            <input type="date" class="form-control" id="start_date" name="start_date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="end_date" class="form-label">End Date</label>
+                            <input type="date" class="form-control" id="end_date" name="end_date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="gpa" class="form-label">GPA</label>
+                            <input type="number" class="form-control" id="gpa" name="gpa" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description and Achievement</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" maxlength="400"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="educationForm">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>

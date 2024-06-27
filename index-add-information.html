@@ -1,0 +1,80 @@
+<!-- resources/views/additional_information.blade.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Additional Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#additionalInfoModal">
+        Edit Additional Information
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="additionalInfoModal" tabindex="-1" aria-labelledby="additionalInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="additionalInfoModalLabel">Edit Additional Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="additionalInfoForm">
+                        <div class="mb-3">
+                            <label for="religion" class="form-label">Religion</label>
+                            <select class="form-select" id="religion" name="religion" required>
+                                <option value="" selected disabled>Choose your religion</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Christianity">Christianity</option>
+                                <option value="Hinduism">Hinduism</option>
+                                <option value="Buddhism">Buddhism</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dob" class="form-label">Date Of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="last_salary" class="form-label">Last Salary</label>
+                            <input type="text" class="form-control" id="last_salary" name="last_salary" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expected_salary_min" class="form-label">Expected Salary (Minimum)</label>
+                            <input type="text" class="form-control" id="expected_salary_min" name="expected_salary_min" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expected_salary_max" class="form-label">Expected Salary (Maximum)</label>
+                            <input type="text" class="form-control" id="expected_salary_max" name="expected_salary_max" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="industry_preference" class="form-label">Industry Preference</label>
+                            <input type="text" class="form-control" id="industry_preference" name="industry_preference" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="avoided_industry" class="form-label">Avoided Industry</label>
+                            <input type="text" class="form-control" id="avoided_industry" name="avoided_industry">
+                        </div>
+                        <div class="mb-3">
+                            <label for="language_proficiency" class="form-label">Language on Professional Working Proficiency</label>
+                            <input type="text" class="form-control" id="language_proficiency" name="language_proficiency" placeholder="Ex. English, Bahasa Indonesia, Japanese">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="additionalInfoForm">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>
